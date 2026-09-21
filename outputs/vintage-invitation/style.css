@@ -68,6 +68,10 @@ main:not([hidden]){animation:enter .9s both}
 .couple span{font-family:var(--script);font-size:.8em}
 .collage-date{font-size:max(13.5px,3.5cqw);font-weight:500;line-height:1.15;color:#1a130e}
 .collage-date span{display:block;font-family:var(--caps);font-size:max(8.5px,1.85cqw);font-weight:600;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+/* Frame inner band below the doily, measured on stationery.webp: 68 to 76 percent down, 10 to 90 percent across. */
+.venue-tag{position:absolute;left:10%;right:10%;top:70.4%;display:flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--caps);font-weight:600;font-size:max(11px,2.4cqw);letter-spacing:.2em;text-transform:uppercase;color:#1f1812}
+.venue-tag:before,.venue-tag:after{content:'';flex:0 0 auto;width:12%;border-top:1px solid #b8923f99}
+.venue-tag svg{width:1.15em;height:1.15em;fill:#b8923f;flex:0 0 auto}
 .polaroid{position:absolute;width:38%;right:5%;top:28%;transform:rotate(6deg);background:#faf8f1;padding:10px 10px 32px;box-shadow:2px 7px 16px #493c342c}
 .photo-crop{display:block;overflow:hidden;aspect-ratio:1;width:100%}
 .photo-crop img{width:100%;height:100%;object-fit:cover;object-position:50% 32%;transform:scale(1.35);transform-origin:50% 32%}
