@@ -59,15 +59,15 @@ main:not([hidden]){animation:enter .9s both}
 .text-button{font-family:var(--caps);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;background:none;border:0;padding:10px 0;white-space:nowrap}
 .monogram{font-family:var(--script);font-size:31px;white-space:nowrap}
 .invitation-hero{text-align:center;padding-top:20px}
-.collage{position:relative;width:min(690px,100%);aspect-ratio:3/4;margin:5px auto 0}
+.collage{position:relative;width:min(690px,100%);aspect-ratio:3/4;margin:5px auto 0;container-type:inline-size}
 .stationery{width:100%;height:100%;object-fit:cover;display:block;mix-blend-mode:multiply}
 /* Doily inner circle measured on stationery.webp: centre 34.1%,49.4%, about 34% wide. Box is centred on it. */
 .lace-copy{position:absolute;left:17.1%;top:36.9%;width:34%;height:25%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;transform:rotate(-7deg)}
-.lace-copy h2{font-family:var(--script);font-size:52px;font-weight:400;line-height:.83}
-.couple{font-size:27px;line-height:1.02;margin:12px 0 8px}
+.lace-copy h2{font-family:var(--script);font-size:max(24px,6.4cqw);font-weight:400;line-height:.86}
+.couple{font-size:max(13px,3.4cqw);line-height:1.05;margin:max(5px,1.4cqw) 0 max(3px,.9cqw)}
 .couple span{font-family:var(--script);font-size:.8em}
-.collage-date{font-size:22px;line-height:1.2}
-.collage-date span{display:block;font-family:var(--caps);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.collage-date{font-size:max(11px,2.9cqw);line-height:1.15}
+.collage-date span{display:block;font-family:var(--caps);font-size:max(6.5px,1.5cqw);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
 .polaroid{position:absolute;width:38%;right:5%;top:28%;transform:rotate(6deg);background:#faf8f1;padding:10px 10px 32px;box-shadow:2px 7px 16px #493c342c}
 .photo-crop{display:block;overflow:hidden;aspect-ratio:1;width:100%}
 .photo-crop img{width:100%;height:100%;object-fit:cover;object-position:50% 32%;transform:scale(1.35);transform-origin:50% 32%}
@@ -139,10 +139,6 @@ dialog p:not(.eyebrow){font-size:21px;line-height:1.4;margin-bottom:25px}
   .env-prompt{font-size:10px}
   .invitation-header{padding:15px 20px}
   .text-button{font-size:10px}
-  .lace-copy h2{font-size:32px}
-  .couple{font-size:19px;margin:7px 0 3px}
-  .collage-date{font-size:16px;line-height:1.1}
-  .collage-date span{font-size:8px}
   .polaroid{padding:7px 7px 22px}
   .polaroid figcaption{font-size:17px;margin-top:6px}
   .scroll-cue{font-size:16px}
@@ -164,9 +160,6 @@ dialog p:not(.eyebrow){font-size:21px;line-height:1.4;margin-bottom:25px}
   .invitation-header{padding:15px 14px;gap:9px}
   .text-button{font-size:8px;letter-spacing:.08em}
   .monogram{font-size:25px}
-  .lace-copy h2{font-size:28px}
-  .couple{font-size:17px;margin:6px 0 4px}
-  .collage-date{font-size:14px}
   .polaroid figcaption{font-size:14px}
   .scratch-message p{font-size:30px}
   .countdown{gap:5px}
