@@ -5,7 +5,7 @@ const cover = $('cover'), invitation = $('invitation'), song = $('song');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 // Timeline lives in the .cover.opening CSS. The cover goes position-fixed while opening so the
 // invitation can render underneath it and the two crossfade with no blank frame.
-const OPENING = { revealAt: 2000, doneAt: 2750 };
+const OPENING = { revealAt: 3500, doneAt: 4300 };
 function showInvitation(updateHash = true) {
   cover.classList.remove('opening'); cover.hidden = true; invitation.hidden = false;
   if (updateHash) history.replaceState(null, '', '#invitation');

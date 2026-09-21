@@ -24,11 +24,11 @@ await shot('00-cover');
 await evalJs(`document.getElementById('open').click(); 'clicked'`);
 const t0 = Date.now();
 const checks = {};
-for (const ms of [300, 700, 1200, 1700, 2200, 2600, 3000, 3600]) { const wait = t0 + ms - Date.now(); if (wait > 0) await sleep(wait); await shot(`open-${String(ms).padStart(4,'0')}`);
-  if (ms === 1700) checks.flapOpen = await evalJs(`new DOMMatrix(getComputedStyle(document.querySelector('.env-flap')).transform).m33 < 0`);
-  if (ms === 2200) checks.cardRisen = await evalJs(`new DOMMatrix(getComputedStyle(document.querySelector('.env-card')).transform).m42 < -30`);
-  if (ms === 2600) checks.crossfade = await evalJs(`!document.getElementById('invitation').hidden && !document.getElementById('cover').hidden`);
-  if (ms === 3600) checks.coverGone = await evalJs(`document.getElementById('cover').hidden && !document.getElementById('cover').classList.contains('opening')`); }
+for (const ms of [300, 900, 1500, 2100, 2700, 3300, 3900, 4600]) { const wait = t0 + ms - Date.now(); if (wait > 0) await sleep(wait); await shot(`open-${String(ms).padStart(4,'0')}`);
+  if (ms === 2100) checks.flapOpen = await evalJs(`new DOMMatrix(getComputedStyle(document.querySelector('.env-flap')).transform).m33 < 0`);
+  if (ms === 2700) checks.cardRisen = await evalJs(`new DOMMatrix(getComputedStyle(document.querySelector('.env-card')).transform).m42 < -30`);
+  if (ms === 3900) checks.crossfade = await evalJs(`!document.getElementById('invitation').hidden && !document.getElementById('cover').hidden`);
+  if (ms === 4600) checks.coverGone = await evalJs(`document.getElementById('cover').hidden && !document.getElementById('cover').classList.contains('opening')`); }
 await sleep(300);
 await shot('10-invitation');
 await evalJs(`document.getElementById('details').scrollIntoView({block:'start'}); 'ok'`);
