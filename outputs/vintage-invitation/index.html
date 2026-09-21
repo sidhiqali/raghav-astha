@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f3eee5">
+<title>Raghav &amp; Aastha — Save the Date</title><meta name="description" content="Save the date for Raghav & Aastha's wedding festivities, 25–27 December 2026.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%23f3eee5'/%3E%3Ctext x='20' y='28' text-anchor='middle' font-family='serif' font-style='italic' font-size='28' fill='%23756849'%3E%26%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body>
+<section class="cover" id="cover" aria-label="Open wedding invitation">
+  <div class="backdrop" aria-hidden="true"></div>
+  <div class="cover-petals" aria-hidden="true"><img src="assets/petal.webp" alt=""><img src="assets/petal.webp" alt=""><img src="assets/petal.webp" alt=""><img src="assets/petal.webp" alt=""></div>
+  <div class="cover-heading"><p class="eyebrow">We are getting married!</p><h1>Raghav <span>&amp;</span> Aastha</h1><p class="small-date">December 2026</p></div>
+  <button class="envelope" id="open" aria-label="Open Raghav and Aastha’s envelope">
+    <span class="env-stage" aria-hidden="true">
+      <span class="env-shadow"></span>
+      <span class="env-inside"></span>
+      <span class="env-card"><span class="env-card-kicker">With love</span><span class="env-card-names">Raghav<br>&amp; Aastha</span><span class="env-card-rule"></span><span class="env-card-date">December 2026</span></span>
+      <img class="env-pocket" src="assets/envelope-ivory.webp" alt="">
+      <span class="env-flap"><img class="env-flap-face" src="assets/envelope-ivory.webp" alt=""><span class="env-lining"></span></span>
+      <span class="env-light"></span>
+    </span>
+    <span class="env-prompt">Touch the seal to open</span>
+  </button>
+  <p class="cover-footer">With love, a new chapter begins.</p>
+</section>
+<main id="invitation" hidden>
+  <header class="invitation-header"><button class="text-button" id="back" aria-label="Back to the envelope">← <span>The beginning</span></button><span class="monogram">R &amp; A</span><a class="text-button" href="#details">The details ↓</a></header>
+  <section class="invitation-hero" aria-labelledby="invite-title">
+    <div class="collage">
+      <img class="stationery" src="assets/stationery.webp" alt="Antique gold frame, ivory lace and white roses" width="1086" height="1448">
+      <div class="lace-copy"><h2 id="invite-title">Save<br>the Date</h2><p class="couple">Raghav<br><span>&amp;</span> Aastha</p><p class="collage-date">25 · 26 · 27<span>December 2026</span></p></div>
+      <figure class="polaroid"><span class="photo-crop"><img src="assets/couple.webp" alt="Raghav and Aastha together"></span><figcaption>And so it begins…</figcaption></figure>
+      <div class="music-area"><button class="record" id="music" aria-label="Music information"><span class="record-label"><span class="record-monogram">R &amp; A</span><span id="play-icon">♪</span></span></button><span class="music-caption" id="music-caption">Our soundtrack</span></div>
+    </div>
+    <a class="scroll-cue" href="#details">A date to remember <span>↓</span></a>
+  </section>
+  <section class="details" id="details" aria-labelledby="celebration-title">
+    <h2 id="celebration-title">Save the Date</h2>
+    <div class="scratch-wrap" id="scratch-wrap">
+      <div class="scratch-card" id="scratch-card">
+        <div class="scratch-message" id="scratch-message" aria-hidden="true" tabindex="-1"><p>25, 26 &amp; 27<span>December 2026</span></p></div>
+        <canvas id="date-foil" aria-label="Scratch the foil to reveal our wedding dates"></canvas>
+      </div>
+      <button class="reveal-link" id="reveal-dates" type="button">Reveal without scratching</button>
+      <p class="scratch-note" id="scratch-note"></p>
+    </div>
+    <p class="sr-only" id="scratch-status" role="status"></p>
+    <div class="flourish" aria-hidden="true">❦</div>
+    <p class="venue">Venue details to follow</p>
+    <p class="countdown-title" id="countdown-title">Counting the moments until we celebrate</p>
+    <div class="countdown" aria-label="Countdown to 25 December 2026"><div><b id="days">0</b><span>Days</span></div><i>:</i><div><b id="hours">00</b><span>Hours</span></div><i>:</i><div><b id="minutes">00</b><span>Minutes</span></div><i>:</i><div><b id="seconds">00</b><span>Seconds</span></div></div>
+    <p class="invitation-copy">Save these dates for our wedding festivities.<br>We can’t wait to celebrate with you.</p>
+    <button class="outline-button" id="rsvp">RSVP</button>
+    <a class="calendar-link" href="event.ics" download>Add to calendar</a>
+    <p class="formal">Formal invitation to follow</p>
+    <p class="signature">Raghav &amp; Aastha</p>
+  </section>
+</main>
+<dialog id="notice"><button class="close" id="close" aria-label="Close message">×</button><p class="eyebrow">Raghav &amp; Aastha</p><h2 id="notice-title"></h2><p id="notice-copy"></p><button class="outline-button" id="notice-done">Back to invitation</button></dialog>
+<audio id="song" loop preload="none"></audio>
+<div class="celebration" id="celebration" aria-hidden="true"></div>
+</body></html>
