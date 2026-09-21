@@ -45,6 +45,10 @@ await mouse('mousePressed', r.x + 20, r.y + 20);
 for (let y = 20, row = 0; y < r.height - 15; y += 14, row++) { const l = row % 2 ? r.width - 20 : 20, rt = row % 2 ? 20 : r.width - 20; for (let s = 0; s <= 10; s++) await mouse('mouseMoved', r.x + l + (rt - l) * s / 10, r.y + y); }
 await mouse('mouseReleased', r.x + 20, r.y + r.height - 20);
 const t1 = Date.now();
+await evalJs(`document.getElementById('photo-open').click(); 'ok'`);
+await sleep(400);
+await shot('30-lightbox');
+checks.lightbox = await evalJs(`(() => { const d = document.getElementById('lightbox'); const open = d.open; d.close(); return open && !d.open; })()`);
 checks.fireworks = await evalJs(`document.querySelectorAll('.firework').length`);
 checks.confetti = await evalJs(`document.querySelectorAll('.confetti').length`);
 for (const ms of [150, 600, 1200, 1900, 2800]) { const wait = t1 + ms - Date.now(); if (wait > 0) await sleep(wait); await shot(`reveal-${String(ms).padStart(4,'0')}`); }

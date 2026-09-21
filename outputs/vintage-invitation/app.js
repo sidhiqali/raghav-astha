@@ -27,7 +27,9 @@ $('back').addEventListener('click', () => {
 });
 function notice(title, message) { $('notice-title').textContent = title; $('notice-copy').textContent = message; $('notice').showModal(); }
 $('close').onclick = $('notice-done').onclick = () => $('notice').close();
-$('notice').addEventListener('click', event => { if (event.target === $('notice')) { const r = $('notice').getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) $('notice').close(); } });
+for (const dialog of [$('notice'), $('lightbox')]) dialog.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); } });
+$('photo-open').onclick = () => $('lightbox').showModal();
+$('lightbox-close').onclick = () => $('lightbox').close();
 $('rsvp').onclick = () => CONFIG.rsvpUrl ? window.location.assign(CONFIG.rsvpUrl) : notice('A little closer to the day', 'RSVP details will be shared with the formal invitation. For now, save 25–27 December 2026.');
 function updateMusic() { $('music').dataset.state = CONFIG.song ? (song.paused ? 'paused' : 'playing') : 'none'; $('music').setAttribute('aria-label', CONFIG.song ? (song.paused ? 'Play our song' : 'Pause our song') : 'Music information'); $('play-icon').textContent = CONFIG.song ? '' : '♪'; $('music-caption').textContent = CONFIG.song ? (song.paused ? 'Tap to play' : 'Tap to pause') : 'Our soundtrack'; }
 if (CONFIG.song) song.src = CONFIG.song;

@@ -35,7 +35,7 @@
     <div class="collage">
       <img class="stationery" src="assets/stationery.webp" alt="Antique gold frame, ivory lace and white roses" width="1086" height="1448">
       <div class="lace-copy"><h2 id="invite-title">Save<br>the Date</h2><p class="couple">Raghav<br><span>&amp;</span> Aastha</p><p class="collage-date">25 · 26 · 27<span>December 2026</span></p></div>
-      <figure class="polaroid"><span class="photo-crop"><img src="assets/couple.webp" alt="Raghav and Aastha together"></span><figcaption>And so it begins…</figcaption></figure>
+      <figure class="polaroid"><button class="photo-button" id="photo-open" type="button" aria-label="View the photo larger"><span class="photo-crop"><img src="assets/couple.webp" alt="Raghav and Aastha together"></span></button><figcaption>And so it begins…</figcaption></figure>
     </div>
     <a class="scroll-cue" href="#details">A date to remember <span>↓</span></a>
   </section>
@@ -62,6 +62,7 @@
   </section>
 </main>
 <dialog id="notice"><button class="close" id="close" aria-label="Close message">×</button><p class="eyebrow">Raghav &amp; Aastha</p><h2 id="notice-title"></h2><p id="notice-copy"></p><button class="outline-button" id="notice-done">Back to invitation</button></dialog>
+<dialog id="lightbox" class="lightbox" aria-label="Photo of Raghav and Aastha"><button class="close" id="lightbox-close" aria-label="Close photo">×</button><img src="assets/couple.webp" alt="Raghav and Aastha together"><p>And so it begins…</p></dialog>
 <audio id="song" loop preload="none"></audio>
 <button class="music-fab" id="music" aria-label="Music information"><span id="play-icon">♪</span><span class="sr-only" id="music-caption">Our soundtrack</span></button>
 <div class="celebration" id="celebration" aria-hidden="true"></div>
